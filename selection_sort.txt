@@ -1,0 +1,19 @@
+numbers = [1, 10, 0, 4, 9]
+
+
+def selection_sort(array):
+    size = len(array)
+    for i in range(size - 1):
+        minimum = i+1
+        for j in range(i+2, size):
+            if array[minimum] > array[j]:
+                minimum = j
+        if array[minimum] < array[i]:
+            item = array[i]
+            array[i] = array[minimum]
+            array[minimum] = item
+
+    return array
+
+
+print(selection_sort(numbers))
