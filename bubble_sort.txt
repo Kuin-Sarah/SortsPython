@@ -4,7 +4,7 @@ numbers = [1, 10, 0, 4, 9]
 def bubble_sort(array):
     size = len(array)
     for i in range(size):
-        for j in range(size - 1):
+        for j in range(size - i - 1):
             if array[j] > array[j+1]:
                 item = array[j]
                 array[j] = array[j+1]
